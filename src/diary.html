@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plan</title>
+    <style>
+        body {
+            background-image: url("travel.webp");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            font-size: 20px;
+            color: rgb(19, 22, 26);
+            overflow-y: auto;
+        }
+        .container {
+            background-color: rgba(60, 242, 255, 0.705);
+            border-radius: 20px;
+            text-align: center;
+            width: 500px;
+            font-weight: bold;
+            height: auto;
+            padding: 8%;
+            margin: 20px auto;
+        }
+        input, textarea {
+            width: 90%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .entry {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            text-align: left;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            margin-top: 20px;
+            display: block;
+        }
+
+        .group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 70px;
+            font-size: 25px;
+        }
+
+        li{
+          list-style-type: none;
+        }
+
+        ul{
+            display: flex;
+            gap: 20px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="group">
+            <center>
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about_us.html">ABOUT US</a></li>
+              <li><a href="diary.html">PLAN</a></li>
+              <li><a href="search.html">SEARCH LOCATION</a></li>
+            </ul>
+          </center>
+          </div>
+        </header>
+        
+    <div class="container">
+        <h3>Travel Plan</h3>
+        <div id="editSection">
+        <input type="text" id="titleInput" placeholder="Plan Title">
+        <textarea id="contentInput" placeholder="Write your journey plan here..."></textarea>
+        <textarea id="itinerariesInput" placeholder="Itineraries (Editable)"></textarea>
+        <textarea id="activitiesInput" placeholder="Activities (Editable)"></textarea>
+        <button id="addButton" onclick="createEntry()">Add Entry</button>
+        <button id="saveButton" style="display: none;" onclick="saveEntry()">Save Changes</button>
+        <div id="diaryEntries"></div>
+    </div>
+</div>
+    <center><a href="index.html">BACK</a></center>
+    <script src="diary.js"></script>
+</body>
+</html>
